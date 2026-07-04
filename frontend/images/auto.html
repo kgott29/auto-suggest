@@ -12,6 +12,29 @@
             text-align:center;
             margin-top: 100px;
         }
+        .logo-wordmark{
+            color:blue;
+        }
+        .tagline{
+            color:gray;
+        }
+        .rounded{
+            padding: 15px 15px 15px 45px;
+            border-radius: 25px;
+            width:50%;
+        }
+        .lens{
+            position:relative;
+            left:40px;
+        }
+        #suggest-icon{
+            margin-top: 20px;
+            border: 1px solid gray;
+            width: 50%;
+            margin-left: 25%;
+            padding: 5px;
+        }
+        
     </style>
 
 </head>
@@ -20,9 +43,16 @@
         <span id="gear">&#x2699;</span>
         <span id="pill">&#x2022; Online | &#x23f0; - ms</span>
         <div id="home">
-            <h1><span>Being Infinity </span></h1>
-            <p>One Million phrases. Four Algorithms. Prefix based Auto Suggest</p>
-            <span>&#128269; <input type="text" placeholder="Start typing to search"></span>
+            <h1><span class="logo-wordmark">Being</span><span>Infinity </span></h1>
+            <p class="tagline">One Million phrases. Four Algorithms. Prefix based Auto Suggest</p>
+            <span>
+                <span class="lens">&#128269;</span>
+                <input class="rounded" type="text" placeholder="Start typing to search">
+            </span>
+            <div id="suggest-icon">
+                <p>Suggestion Box</p>
+            </div>
+
         </div>
     </div>   
 </body>
