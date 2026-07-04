@@ -16,9 +16,28 @@ function toggle(){
     curUserId=1;
   else
     curUserId=0;
-  // image
   document.getElementById("img").src=users[curUserId].image;
-  // name
   document.getElementById("card-name").innerText=users[curUserId].name;
   document.getElementById("card-gender").innerText = users[curUserId].gender;
+}
+function getRandomUser()
+{
+  fetch("https://randomuser.me/api")
+    .then(function (data){
+      return data.json()
+    })
+    .then(function (parsedData){
+      let gender = parsedData.results[0].gender;
+
+      let first = parsedData.results[0].name.first;
+      let last = parsedData.results[0].name.last;
+      let name = first  + " " + last;
+      let imageUrl = parsedData.results[0].picture.large;
+      console.log(imageUrl);
+
+      document.getElementById("card-gender").innerText=gender;
+      document.getElementById("card-name").innerText=name;
+      document.getElementById("img").src=imageUrl;
+
+    })
 }
